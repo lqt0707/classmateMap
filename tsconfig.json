@@ -15,13 +15,23 @@
     "sourceMap": true,
     "baseUrl": ".",
     "rootDir": ".",
-    "jsx": "react-jsx",
+    "jsx": "preserve",
+    "jsxFactory": "Taro.createElement",
     "allowJs": true,
     "resolveJsonModule": true,
     "typeRoots": [
-      "node_modules/@types"
-    ]
+      "node_modules/@types",
+      "global.d.ts"
+    ],
+    "paths": {
+      "@/components/*": ["./src/components/*"],
+      "@/utils/*": ["./src/utils/*"],
+      "@/constants/*": ["./src/constants/*"],
+    }
   },
-  "include": ["./src", "./types"],
+  "exclude": [
+    "node_modules",
+    "dist",
+  ],
   "compileOnSave": false
 }

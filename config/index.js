@@ -1,3 +1,5 @@
+import path from 'path'
+
 const config = {
   projectName: 'classmateMap',
   date: '2023-2-8',
@@ -22,6 +24,11 @@ const config = {
   compiler: 'webpack5',
   cache: {
     enable: false // Webpack 持久化缓存配置，建议开启。默认配置请参考：https://docs.taro.zone/docs/config-detail#cache
+  },
+  alias: {
+    '@/components': path.resolve(__dirname, '..', 'src/components'),
+    '@/utils': path.resolve(__dirname, '..', 'src/utils'),
+    '@/constants': path.resolve(__dirname, '..', 'src/constants')
   },
   mini: {
     postcss: {
