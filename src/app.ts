@@ -11,6 +11,8 @@ import {
 } from './constants/data';
 import { LOADING } from './constants/toast';
 import { LIMITSTORAGE } from './constants/storage';
+import { getLevel } from './utils/callcloudfunctions';
+import 'taro-ui/dist/style/index.scss'
 
 class App extends Component<PropsWithChildren> {
   componentDidMount() {

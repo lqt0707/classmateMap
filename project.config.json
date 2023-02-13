@@ -2,7 +2,7 @@
     "miniprogramRoot": "dist/",
     "projectname": "classmateMap",
     "description": "classMap",
-    "appid": "wx1e694bf8683bde93",
+    "appid": "touristappid",
     "setting": {
         "urlCheck": true,
         "es6": false,
@@ -17,7 +17,7 @@
         }
     },
     "compileType": "miniprogram",
-    "libVersion": "2.30.0",
+    "libVersion": "2.29.1",
     "srcMiniprogramRoot": "dist/",
     "packOptions": {
         "ignore": [],
