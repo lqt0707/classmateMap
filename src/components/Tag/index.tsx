@@ -1,11 +1,11 @@
 import { memo } from 'react';
-import './index.sass';
+import './index.scss';
 import { PRIMARY_BG_COLOR, PRIMARY_COLOR } from '@/constants/theme';
 import { View } from '@tarojs/components';
 interface ITagProps {
   label: string; // 标签文字
   bgColor?: string; // 标签背景颜色
-  labelColor: string; // 字体颜色，默认主题色
+  labelColor?: string; // 字体颜色，默认主题色
   width?: number;
   height?: number;
 }

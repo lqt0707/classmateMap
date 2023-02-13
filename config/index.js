@@ -1,4 +1,4 @@
-import path from 'path'
+import path from "path"
 
 const config = {
   projectName: 'classmateMap',
@@ -32,6 +32,16 @@ const config = {
   },
   mini: {
     postcss: {
+      autoprefixer: {
+        enable: true,
+        config: {
+          browsers: [
+            'last 3 versions',
+            'Android >= 4.1',
+            'ios >= 8'
+          ]
+        }
+      },
       pxtransform: {
         enable: true,
         config: {
@@ -41,7 +51,7 @@ const config = {
       url: {
         enable: true,
         config: {
-          limit: 1024 // 设定转换尺寸上限
+          limit: 10240 // 设定转换尺寸上限
         }
       },
       cssModules: {
