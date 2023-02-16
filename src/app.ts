@@ -1,5 +1,5 @@
 import { Component, PropsWithChildren } from 'react';
-import Taro, {Current, showLoading} from '@tarojs/taro';
+import Taro, { Current, getCurrentInstance, showLoading } from '@tarojs/taro';
 import './app.scss';
 import { set as setGlobalData } from './utils/globaldata';
 import {
@@ -12,7 +12,7 @@ import {
 import { LOADING } from './constants/toast';
 import { LIMITSTORAGE } from './constants/storage';
 import { getLevel } from './utils/callcloudfunctions';
-import 'taro-ui/dist/style/index.scss'
+import 'taro-ui/dist/style/index.scss';
 
 class App extends Component<PropsWithChildren> {
   componentDidMount() {
@@ -22,8 +22,8 @@ class App extends Component<PropsWithChildren> {
   }
 
   async componentDidShow() {
-    console.log('this------',this)
-    const { referrerInfo } = Current.router?.params;;
+    console.log('this------', this);
+    const { referrerInfo } = getCurrentInstance().router?.params;
 
     if (referrerInfo && referrerInfo['appId'] === 'wx1e694bf8683bde93') {
       let extraData = referrerInfo['extraData'];

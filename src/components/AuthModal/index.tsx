@@ -46,26 +46,31 @@ const AuthModal = (props: IAuthModalProps) => {
   };
 
   return (
-    <View className={'auth_model'} onTouchMove={handleTouchMove}>
-      <View className={'modal_container'}>
-        <View className={'modal_tilte-container'}>
-          <View className={'modal_title'}>您还未授权</View>
-          <View className={'modal_desc'}>请先授权登录进行操作</View>
+    <View className="auth_modal" onTouchMove={handleTouchMove}>
+      <View className="modal_container">
+        <View className="modal_title-container">
+          <View className="modal_title">您还未授权</View>
+          <View className="modal_desc">请先授权登录进行操作</View>
         </View>
-        <Image src={rocket} className={'rocket'} />
+        <Image className="rocket" src={rocket} />
         <Button
-          hoverClass={'auth_btn_hover'}
-          className={'auth_btn'}
-          openType={'getUserInfo'}
+          hoverClass="auth_btn_hover"
+          className="auth_btn"
+          openType="getUserInfo"
           onGetUserInfo={bindGetUserInfo}
         >
           确认授权
         </Button>
-        <View className={'modal_close'} onClick={()=>onClose()}>
-          <Image src={close} className={'close_icon'}/>
+        <View
+          className="modal_close"
+          onClick={() => {
+            onClose();
+          }}
+        >
+          <Image className="close_icon" src={close}></Image>
         </View>
       </View>
-      <View className={'modal_mask'}/>
+      <View className="modal_mask"></View>
     </View>
   );
 };
